@@ -13,7 +13,8 @@ MongoDB altas => new Project
 Heroku => new 
     - app name (create app) 
     - connect to github
-    - search project which want to deploy 
+    - search project which want to deploy (connect and select branch)
     - create a file in our project(in vs code) -> procfile (and type -> web: node index.js) 
     - npm i dotenv
     - create .env file and write some secret keys and access by {process.env.variableName} not in bracket
+    - go to heroku project setting -> Config Vars -> add env mongo url in key pair based.

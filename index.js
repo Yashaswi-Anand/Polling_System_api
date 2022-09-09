@@ -27,7 +27,7 @@ app.use('/option', optionRoute);
 
 // app return inital result.
 app.get('/', (req,res) =>{
-    res.send("Running my nodeJS server!!!");
+    res.send("Live my nodeJS server!!!");
 })
 
 app.listen(port, function(err){
