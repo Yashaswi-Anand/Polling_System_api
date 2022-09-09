@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/PollingAPI');
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/PollingAPI',{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
 const db = mongoose.connection;
 
@@ -11,3 +14,7 @@ db.once('open', function(){
 });
 
 module.exports = db;
+
+// hdTWy3cXmZvkxnXl
+
+// mongodb+srv://YashaswiAnand:<password>@pollingapicluster.ehch0bc.mongodb.net/?retryWrites=true&w=majority
