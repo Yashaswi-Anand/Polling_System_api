@@ -26,7 +26,7 @@ exports.createQuestion = async (req,res) =>{
 exports.getQuestionsById = async(req,res) =>{
     try {
         const questionId = req.params.id;
-        const question = await Question.findOne({"_id": questionId});
+        const question = await Question.findOne({"_id": questionId}).populate('options');;
         
         if(!question){
             return res.status(400).json({message: 'No questions found...'});
@@ -42,8 +42,8 @@ exports.getQuestionsById = async(req,res) =>{
 // get all questions
 exports.getAllQuestions = async (req,res) => {
 
-    const questionList = await Question.find();
-    return res.status(200).json({questionList, message: "found"})
+    const questionList = await Question.find().populate('options');
+    return res.status(200).json({questionList, message: "Questions fetched successfully."})
 }
 
 // delete question using id
