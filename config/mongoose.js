@@ -15,6 +15,3 @@ db.once('open', function(){
 
 module.exports = db;
 
-// hdTWy3cXmZvkxnXl
-
-// mongodb+srv://YashaswiAnand:<password>@pollingapicluster.ehch0bc.mongodb.net/?retryWrites=true&w=majority
